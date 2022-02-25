@@ -20,11 +20,6 @@ steps:
   inputs:
     arguments: '-nowarn:CS1591 --configuration Release'
 
--# task: DotNetCoreCLI@2
- # displayName: Test
- # inputs:
- #   command: test
-
 - task: DotNetCoreCLI@2
   displayName: Pack
   inputs:
