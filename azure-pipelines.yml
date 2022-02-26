@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
-  name: Azure Pipelines
+  name: Hosted VS2017
 
 steps:
 - task: UseDotNet@2
@@ -24,6 +24,7 @@ steps:
   displayName: Pack
   inputs:
     command: pack
+    arguments: '--no-build --no-restore --include-source $(system.defaultworkingdirectory)'
 
 - task: CopyFiles@2
   displayName: Stage
