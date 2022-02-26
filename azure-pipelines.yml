@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
-  name: Hosted VS2019
+  name: Azure Pipelines
 
 steps:
 - task: UseDotNet@2
