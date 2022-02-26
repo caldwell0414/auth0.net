@@ -1,3 +1,5 @@
+name: '$(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)'
+
 trigger:
 - master
 
@@ -26,6 +28,7 @@ steps:
     command: custom
     custom: pack
     arguments: '-c Release --no-build --no-restore --include-symbols --include-source'
+    versioningScheme: byBuildNumber
 
 - task: CopyFiles@2
   displayName: Stage
