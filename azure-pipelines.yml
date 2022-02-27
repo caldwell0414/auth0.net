@@ -10,22 +10,22 @@ steps:
   inputs:
     version: 5.0.x
 
-- task: DotNetCoreCLI@2
-  displayName: Restore
-  inputs:
-    command: restore
+#- task: DotNetCoreCLI@2
+#  displayName: Restore
+#  inputs:
+#    command: restore
 
-- task: DotNetCoreCLI@2
-  displayName: Build
-  inputs:
-    arguments: '-nowarn:CS1591 --configuration Release'
+#- task: DotNetCoreCLI@2
+#  displayName: Build
+#  inputs:
+#    arguments: '-nowarn:CS1591 --configuration Release'
 
 - task: DotNetCoreCLI@2
   displayName: Pack
   inputs:
     command: custom
     custom: pack
-    arguments: '-c Release --no-build --no-restore --include-source'
+    arguments: '-c Release --include-source'
 
 - task: CopyFiles@2
   displayName: Stage
