@@ -25,7 +25,7 @@ steps:
   inputs:
     command: custom
     custom: pack
-    arguments: '-c Release --no-build --no-restore --include-symbols --include-source'
+    arguments: '-c Release --no-build --no-restore --include-source'
 
 - task: CopyFiles@2
   displayName: Stage
